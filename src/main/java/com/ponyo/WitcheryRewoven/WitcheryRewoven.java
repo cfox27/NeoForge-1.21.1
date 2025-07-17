@@ -122,6 +122,7 @@ public class WitcheryRewoven {
         /*
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+        Hi :)
         */
     }
 }
