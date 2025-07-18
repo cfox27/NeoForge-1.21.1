@@ -100,6 +100,7 @@ public class WitcheryRewoven {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
             event.accept(ModItems.BONE_NEEDLE);
+            event.accept(ModItems.ATTUNED_STONE);
         }
         /* tutorial deleted this as well
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

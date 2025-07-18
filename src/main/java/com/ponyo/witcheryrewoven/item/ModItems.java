@@ -16,6 +16,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> BONE_NEEDLE = ITEMS.register("bone_needle",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ATTUNED_STONE = ITEMS.register("attuned_stone",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
