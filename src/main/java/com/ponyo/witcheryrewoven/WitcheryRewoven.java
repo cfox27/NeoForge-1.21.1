@@ -103,6 +103,7 @@ public class WitcheryRewoven {
             event.accept(ModItems.ATTUNED_STONE);
             event.accept(ModItems.SOFT_CLAY_JAR);
             event.accept(ModItems.CLAY_JAR);
+            event.accept(ModItems.TAGLOCK_KIT);
 
         }
         /* tutorial deleted this as well

@@ -19,7 +19,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CLAY_JAR = ITEMS.register("clay_jar",
             () -> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> TAGLOCK_KIT = ITEMS.register("taglock_kit",
+            () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
