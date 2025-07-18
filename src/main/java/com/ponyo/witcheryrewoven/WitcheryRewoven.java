@@ -1,6 +1,7 @@
 package com.ponyo.witcheryrewoven;
 // Hi this is your special note :)
-import com.ponyo.witcheryrewoven.item.ModItems;
+import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
+import com.ponyo.witcheryrewoven.item.ModItems.PlantItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -72,6 +73,7 @@ public class WitcheryRewoven {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        PlantItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -100,9 +102,9 @@ public class WitcheryRewoven {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
             event.accept(ModItems.BONE_NEEDLE);
-            event.accept(ModItems.ATTUNED_STONE);
-            event.accept(ModItems.SOFT_CLAY_JAR);
-            event.accept(ModItems.CLAY_JAR);
+            event.accept(PlantItems.ATTUNED_STONE);
+            event.accept(PlantItems.SOFT_CLAY_JAR);
+            event.accept(PlantItems.CLAY_JAR);
             event.accept(ModItems.TAGLOCK_KIT);
 
         }
