@@ -1,4 +1,4 @@
-package com.ponyo.WitcheryRewoven;
+package com.ponyo.witcheryrewoven;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;

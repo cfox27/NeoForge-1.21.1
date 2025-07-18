@@ -1,4 +1,4 @@
-package com.ponyo.WitcheryRewoven;
+package com.ponyo.witcheryrewoven;
 
 import java.util.List;
 
