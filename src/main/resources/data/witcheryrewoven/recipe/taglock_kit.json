@@ -1,3 +1,16 @@
 {
-
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "witcheryrewoven:bone_needle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "witcheryrewoven:taglock_kit"
+  }
 }

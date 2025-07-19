@@ -3,7 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "witcheryrewoven:bone_needle"
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:flint"
     }
-  ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "witcheryrewoven:bone_needle"
 }
