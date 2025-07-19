@@ -19,7 +19,7 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> WITCHERYREWOVEN_ITEMS_TAB = CREATIVE_MODE_TAB.register("witcheryrewoven_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TAGLOCK_KIT.get()))
-                    .title(Component.translatable("creativetab.witcheryrewoven_items"))
+                    .title(Component.translatable("creativetab.witcheryrewoven.witcheryrewoven_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TAGLOCK_KIT);
                         output.accept(ModItems.BONE_NEEDLE);
