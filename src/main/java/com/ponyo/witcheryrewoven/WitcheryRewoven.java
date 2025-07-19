@@ -60,9 +60,10 @@ public class WitcheryRewoven {
             event.accept(PlantItems.CLAY_JAR);
             event.accept(ModItems.TAGLOCK_KIT);
         }
-
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.LOG_ALDER);
             event.accept(ModBlocks.LOG_ROWAN);
+
         }
     }
 

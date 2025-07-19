@@ -17,11 +17,19 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(WitcheryRewoven.MODID);
 
+    public static final DeferredBlock<Block> LOG_ALDER = registerBlock(
+            "log_alder",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .strength(2.0F)
+                            .sound(SoundType.WOOD)));
+
     public static final DeferredBlock<Block> LOG_ROWAN = registerBlock(
             "log_rowan",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2.0F)
-                    .sound(SoundType.WOOD)));
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .strength(2.0F)
+                            .sound(SoundType.WOOD)));
 
 
 
