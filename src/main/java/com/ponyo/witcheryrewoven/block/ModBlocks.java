@@ -31,6 +31,19 @@ public class ModBlocks {
                             .strength(2.0F)
                             .sound(SoundType.WOOD)));
 
+    public static final DeferredBlock<Block> LEAVES_ROWAN = registerBlock(
+            "leaves_rowan",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .strength(.2F)
+                            .sound(SoundType.GRASS)));
+
+    public static final DeferredBlock<Block> LEAVES_ALDER = registerBlock(
+            "leaves_alder",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .strength(.2F)
+                            .sound(SoundType.GRASS)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

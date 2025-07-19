@@ -63,6 +63,8 @@ public class WitcheryRewoven {
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.LOG_ALDER);
             event.accept(ModBlocks.LOG_ROWAN);
+            event.accept(ModBlocks.LEAVES_ROWAN);
+            event.accept(ModBlocks.LEAVES_ALDER);
 
         }
     }
