@@ -1,6 +1,7 @@
 package com.ponyo.witcheryrewoven;
 
 import com.ponyo.witcheryrewoven.block.ModBlocks;
+import com.ponyo.witcheryrewoven.item.ModCreativeModeTabs;
 import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
 import com.ponyo.witcheryrewoven.item.ModItems.PlantItems;
 import org.slf4j.Logger;
@@ -35,12 +36,14 @@ public class WitcheryRewoven {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         PlantItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+        // modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -51,9 +54,10 @@ public class WitcheryRewoven {
     }
 
     // Add the example block item to the building blocks tab
+    /*
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-
+            /* added own witchery rewoven tab!
             event.accept(ModItems.BONE_NEEDLE);
             event.accept(PlantItems.ATTUNED_STONE);
             event.accept(PlantItems.SOFT_CLAY_JAR);
@@ -65,9 +69,11 @@ public class WitcheryRewoven {
             event.accept(ModBlocks.LOG_ROWAN);
             event.accept(ModBlocks.LEAVES_ROWAN);
             event.accept(ModBlocks.LEAVES_ALDER);
+        }
 
         }
     }
+    */
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
