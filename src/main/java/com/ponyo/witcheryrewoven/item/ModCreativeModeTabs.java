@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TAGLOCK_KIT);
                         output.accept(ModItems.BONE_NEEDLE);
+                        output.accept(ModItems.MUTANDIS);
                         output.accept(PlantItems.ATTUNED_STONE);
                         output.accept(PlantItems.CLAY_JAR);
                         output.accept(PlantItems.SOFT_CLAY_JAR);
