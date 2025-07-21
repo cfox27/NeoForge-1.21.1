@@ -1,10 +1,12 @@
 package com.ponyo.witcheryrewoven.block;
 
 import com.ponyo.witcheryrewoven.WitcheryRewoven;
+import com.ponyo.witcheryrewoven.block.custom.GlyphBlock;
 import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -45,6 +47,29 @@ public class ModBlocks {
                             .strength(.2F)
                             .sound(SoundType.GRASS)));
 
+    public static final DeferredBlock<Block> GOLDEN_GLYPH = registerBlock(
+            "golden_glyph",
+            () -> new GlyphBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(.1F)));
+
+    public static final DeferredBlock<Block> WHITE_GLYPH = registerBlock(
+            "white_glyph",
+            () -> new GlyphBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(.1F)));
+
+    public static final DeferredBlock<Block> RED_GLYPH = registerBlock(
+            "red_glyph",
+            () -> new GlyphBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(.1F)));
+
+    public static final DeferredBlock<Block> PURPLE_GLYPH = registerBlock(
+            "purple_glyph",
+            () -> new GlyphBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(.1F)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         // Create and register this block

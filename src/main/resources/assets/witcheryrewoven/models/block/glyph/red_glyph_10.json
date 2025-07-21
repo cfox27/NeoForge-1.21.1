@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "witcheryrewoven:block/glyph/red_glyph_10"
+  },
+  "render_type": "cutout"
+}

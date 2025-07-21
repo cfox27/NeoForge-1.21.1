@@ -32,6 +32,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAVES_ALDER);
                         output.accept(ModBlocks.LOG_ALDER);
                         output.accept(ModItems.WHITE_CHALK);
+                        output.accept(ModItems.GOLDEN_CHALK);
+                        output.accept(ModItems.RED_CHALK);
+                        output.accept(ModItems.PURPLE_CHALK);
+                        output.accept(ModBlocks.WHITE_GLYPH);
+                        output.accept(ModBlocks.RED_GLYPH);
                     }).build());
 
     public static void register(IEventBus eventBus) {
