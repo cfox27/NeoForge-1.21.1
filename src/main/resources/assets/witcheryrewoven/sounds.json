@@ -1,0 +1,8 @@
+{
+  "chalk_draw": {
+    "subtitle": "item.chalk_draw",
+    "sounds": [
+      "witcheryrewoven:chalk_draw"
+    ]
+  }
+}

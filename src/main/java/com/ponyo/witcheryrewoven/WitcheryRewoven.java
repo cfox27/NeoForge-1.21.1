@@ -4,6 +4,7 @@ import com.ponyo.witcheryrewoven.block.ModBlocks;
 import com.ponyo.witcheryrewoven.item.ModCreativeModeTabs;
 import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
 import com.ponyo.witcheryrewoven.item.ModItems.PlantItems;
+import com.ponyo.witcheryrewoven.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,6 +42,8 @@ public class WitcheryRewoven {
         ModItems.register(modEventBus);
         PlantItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         // Register the item to a creative tab
         // modEventBus.addListener(this::addCreative);
