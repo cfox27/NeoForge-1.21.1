@@ -28,68 +28,93 @@ public class Mutandis extends Item {
     private static final Random RANDOM = new Random();
 
     //Creates the possibility to make a list of weighted mutations
-    public record WeightedMutation(Block block, int weight) {}
+    public record WeightedPlantMutation(Block block, int weight) {}
 
+    //Creates the possibility to make a list of weighted mutations
+    public record WeightedBlockMutation(Block block, int weight) {}
+    
     //Creates a list of possible Plant Mutations
-    private static  final List<WeightedMutation> PLANT_MUTATIONS = List.of(
+    private static  final List<WeightedPlantMutation> PLANT_MUTATIONS = List.of(
             //There are 30 normal minecraft blocks... to not skew the possibility of getting Witchery blocks, should increase weight
             /*
             The XXXX's are there to remember to switch it to whatever location the blocks get stored in
-            new WeightedMutation(XXXXXXXXXX.ROWAN_SAPLING, 1),
-            new WeightedMutation(XXXXXXXXXX.ALDER_SAPLING, 1),
-            new WeightedMutation(XXXXXXXXXX.HAWTHORN_SAPLING, 1),
-            new WeightedMutation(XXXXXXXXXX.GLINT_WEED, 1),
-            new WeightedMutation(XXXXXXXXXX.SPANISH_MOSS, 1),
-            new WeightedMutation(XXXXXXXXXX.EMBER_MOSS, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.ROWAN_SAPLING, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.ALDER_SAPLING, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.HAWTHORN_SAPLING, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.GLINT_WEED, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.SPANISH_MOSS, 1),
+            new WeightedPlantMutation(XXXXXXXXXX.EMBER_MOSS, 1),
             */
-            new WeightedMutation(Blocks.SHORT_GRASS, 1),
-            new WeightedMutation(Blocks.LILY_PAD, 1),
-            new WeightedMutation(Blocks.VINE, 1),
-            new WeightedMutation(Blocks.BROWN_MUSHROOM, 1),
-            new WeightedMutation(Blocks.RED_MUSHROOM, 1),
-            new WeightedMutation(Blocks.OAK_SAPLING, 1),
-            new WeightedMutation(Blocks.BIRCH_SAPLING, 1),
-            new WeightedMutation(Blocks.SPRUCE_SAPLING, 1),
-            new WeightedMutation(Blocks.JUNGLE_SAPLING, 1),
-            new WeightedMutation(Blocks.ACACIA_SAPLING, 1),
-            new WeightedMutation(Blocks.DARK_OAK_SAPLING, 1),
-            new WeightedMutation(Blocks.MANGROVE_PROPAGULE, 1),
-            new WeightedMutation(Blocks.AZALEA, 1),
-            new WeightedMutation(Blocks.FLOWERING_AZALEA, 1),
-            new WeightedMutation(Blocks.CHERRY_SAPLING, 1),
-            new WeightedMutation(Blocks.BIG_DRIPLEAF, 1),
-            new WeightedMutation(Blocks.PEONY, 1),
-            new WeightedMutation(Blocks.SUNFLOWER, 1),
-            new WeightedMutation(Blocks.LILAC, 1),
-            new WeightedMutation(Blocks.ROSE_BUSH, 1),
-            new WeightedMutation(Blocks.DANDELION, 1),
-            new WeightedMutation(Blocks.POPPY, 1),
-            new WeightedMutation(Blocks.BLUE_ORCHID, 1),
-            new WeightedMutation(Blocks.LILY_OF_THE_VALLEY, 1),
-            new WeightedMutation(Blocks.ALLIUM, 1),
-            new WeightedMutation(Blocks.AZURE_BLUET, 1),
-            new WeightedMutation(Blocks.OXEYE_DAISY, 1),
-            new WeightedMutation(Blocks.CORNFLOWER, 1),
-            new WeightedMutation(Blocks.RED_TULIP, 1),
-            new WeightedMutation(Blocks.PINK_TULIP, 1),
-            new WeightedMutation(Blocks.ORANGE_TULIP, 1)
-    );
+            new WeightedPlantMutation(Blocks.SHORT_GRASS, 1),
+            new WeightedPlantMutation(Blocks.LILY_PAD, 1),
+            new WeightedPlantMutation(Blocks.VINE, 1),
+            new WeightedPlantMutation(Blocks.BROWN_MUSHROOM, 1),
+            new WeightedPlantMutation(Blocks.RED_MUSHROOM, 1),
+            new WeightedPlantMutation(Blocks.OAK_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.BIRCH_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.SPRUCE_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.JUNGLE_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.ACACIA_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.DARK_OAK_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.MANGROVE_PROPAGULE, 1),
+            new WeightedPlantMutation(Blocks.AZALEA, 1),
+            new WeightedPlantMutation(Blocks.FLOWERING_AZALEA, 1),
+            new WeightedPlantMutation(Blocks.CHERRY_SAPLING, 1),
+            new WeightedPlantMutation(Blocks.BIG_DRIPLEAF, 1),
+            new WeightedPlantMutation(Blocks.PEONY, 1),
+            new WeightedPlantMutation(Blocks.SUNFLOWER, 1),
+            new WeightedPlantMutation(Blocks.LILAC, 1),
+            new WeightedPlantMutation(Blocks.ROSE_BUSH, 1),
+            new WeightedPlantMutation(Blocks.DANDELION, 1),
+            new WeightedPlantMutation(Blocks.POPPY, 1),
+            new WeightedPlantMutation(Blocks.BLUE_ORCHID, 1),
+            new WeightedPlantMutation(Blocks.LILY_OF_THE_VALLEY, 1),
+            new WeightedPlantMutation(Blocks.ALLIUM, 1),
+            new WeightedPlantMutation(Blocks.AZURE_BLUET, 1),
+            new WeightedPlantMutation(Blocks.OXEYE_DAISY, 1),
+            new WeightedPlantMutation(Blocks.CORNFLOWER, 1),
+            new WeightedPlantMutation(Blocks.RED_TULIP, 1),
+            new WeightedPlantMutation(Blocks.PINK_TULIP, 1),
+            new WeightedPlantMutation(Blocks.ORANGE_TULIP, 1)
+            );
 
+    private static  final List<WeightedBlockMutation> BLOCK_MUTATIONS = List.of(
+            new WeightedBlockMutation(Blocks.GRASS_BLOCK, 1),
+            new WeightedBlockMutation(Blocks.PODZOL, 1),
+            new WeightedBlockMutation(Blocks.MYCELIUM, 1),
+            new WeightedBlockMutation(Blocks.MOSS_BLOCK, 1)
+            );
+    
     //Registers the allowable blocks to be clicked to get a mutation to occur
-    private static final Set<Block> PLANT_BLOCKS = PLANT_MUTATIONS.stream()
-            .map(WeightedMutation::block)
+    private static final Set<Block> MUTATABLE_PLANTS = PLANT_MUTATIONS.stream()
+            .map(WeightedPlantMutation::block)
             .collect(Collectors.toSet());
 
-    //registers isPlant to be a function to determine if the Plant is on the list
-    private static boolean isPlant(Block block) {
-        return PLANT_BLOCKS.contains(block);
+    private static final Set<Block> MUTATABLE_BLOCKS = BLOCK_MUTATIONS.stream()
+            .map(WeightedBlockMutation::block)
+            .collect(Collectors.toSet());
+
+    private static boolean isBlock(Block block) {
+        return MUTATABLE_BLOCKS.contains(block);
     }
 
     //creating a way to filter the list
     private static Block getRandomPlantMutation(Block current, Level level, BlockPos pos) {
-        List<WeightedMutation> validMutations = PLANT_MUTATIONS.stream()
+        List<WeightedPlantMutation> validPlantMutations = PLANT_MUTATIONS.stream()
                 //filters the list based on weight (less than 0 cant be spawned) & if it is different then the current block
                 .filter(m -> m.weight() > 0 && m.block() != current)
+                .filter(m -> {
+                    Block block = m.block();
+                    Block currentBlock = level.getBlockState(pos).getBlock();
+
+                    if (block != Blocks.GRASS_BLOCK && currentBlock == Blocks.MYCELIUM) {
+                        return false;
+                    }
+                    if (block != Blocks.MYCELIUM && currentBlock == Blocks.GRASS_BLOCK) {
+                        return false;
+                    }
+                    return true;
+                })
                 //filters the list based on three seperate things:
                 .filter(m -> {
                     Block block = m.block();
@@ -103,6 +128,10 @@ public class Mutandis extends Item {
                     }
                     //is the mutation block a mushroom? if so, do not allow it to be placed if the clicked block is a two block tall flower
                     if (block == Blocks.RED_MUSHROOM && level.getBlockState(pos).hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)){
+                        return false;
+                    }
+                    //is the mutation block a lily pad? if so, do not allow it to be placed if the clicked block is a two block tall flower
+                    if (block == Blocks.LILY_PAD && level.getBlockState(pos).hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)){
                         return false;
                     }
                     /*is the mutation block a Spanish Moss?? if so, do not allow it to be placed if the clicked block is a two block tall flower
@@ -125,7 +154,7 @@ public class Mutandis extends Item {
                 .toList();
 
         //adds up the weights of all the valid plant mutations
-        int totalWeight = validMutations.stream().mapToInt(WeightedMutation::weight).sum();
+        int totalWeight = validPlantMutations.stream().mapToInt(WeightedPlantMutation::weight).sum();
 
         //if no valid mutations are available (weight is 0), no mutation happens
         if (totalWeight == 0) return current;
@@ -135,13 +164,34 @@ public class Mutandis extends Item {
         int cumulative = 0;
 
         //loop through all valid plant mutations, once the roll is less than the cumulative value, select the block
-        for (WeightedMutation mutation : validMutations) {
+        for (WeightedPlantMutation mutation : validPlantMutations) {
             cumulative += mutation.weight();
             if (roll < cumulative) {
                 return mutation.block();
             }
         }
         //fallback to prevent an endless loop (should never be used)
+        return current;
+    }
+
+    private static Block getRandomBlockMutation(Block current, Level level, BlockPos pos) {
+        List<WeightedBlockMutation> validBlockMutations = BLOCK_MUTATIONS.stream()
+                .filter(m -> m.weight() > 0 && m.block() != current)
+                .toList();
+
+        int totalWeight = validBlockMutations.stream().mapToInt(WeightedBlockMutation::weight).sum();
+
+        if (totalWeight == 0) return current;
+
+        int roll = RANDOM.nextInt(totalWeight);
+        int cumulative = 0;
+
+        for (WeightedBlockMutation mutation : validBlockMutations) {
+            cumulative += mutation.weight();
+            if (roll < cumulative) {
+                return mutation.block();
+            }
+        }
         return current;
     }
 
@@ -170,11 +220,12 @@ public class Mutandis extends Item {
         BlockPos pos = context.getClickedPos();
         BlockPos abovePos = pos.above();
         Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
+        Block mutatedBlock;
 
         //This if statement only proceeds if the clicked block is one we determined as a plant
-        if (isPlant(clickedBlock)) {
+        if (MUTATABLE_PLANTS.contains(clickedBlock)) {
             //selects a new block to turn into using the weighted logic
-            Block mutatedBlock = getRandomPlantMutation(clickedBlock, level, pos);
+            mutatedBlock = getRandomPlantMutation(clickedBlock, level, pos);
 
             //if the mutation is different from the current block (it will be due to filters), it attempts to apply it
             if (mutatedBlock != clickedBlock) {
@@ -190,7 +241,7 @@ public class Mutandis extends Item {
                         }
                     }
                     //if the placed block is a double block, check that the above block is air, then place the upper & lower halves
-                    if (mutatedBlock.defaultBlockState().hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)){
+                    if (mutatedBlock.defaultBlockState().hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)) {
                         if (level.getBlockState(abovePos).isAir()) {
                             level.setBlock(pos, mutatedBlock.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER), 3);
                             level.setBlock(pos.above(), mutatedBlock.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER), 3);
@@ -216,11 +267,25 @@ public class Mutandis extends Item {
                 } else {
                     spawnParticles(level, pos);
                 }
-
                 return InteractionResult.SUCCESS;
             }
         }
-
+        // Check if current block is a mutatable block instead of mutatable plant
+        if (MUTATABLE_BLOCKS.contains(clickedBlock)) {
+            mutatedBlock = getRandomBlockMutation(clickedBlock, level, pos);
+            if (mutatedBlock != clickedBlock) {
+                if (!level.isClientSide) {
+                    level.setBlock(pos, mutatedBlock.defaultBlockState(), 3);
+                    level.playSound(null, pos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
+                    if (context.getPlayer() != null /*&& !context.getPlayer().isCreative()*/) {
+                        context.getItemInHand().shrink(1);
+                    }
+                } else {
+                    spawnParticles(level, pos);
+                }
+                return InteractionResult.SUCCESS;
+            }
+        }
         return InteractionResult.PASS;
     }
 }

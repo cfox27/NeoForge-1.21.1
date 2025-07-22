@@ -74,7 +74,7 @@ public class GlyphBlock extends Block {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         //Only trigger if this is the specific GOLDEN_GLYPH block
-        if (state.is(ModBlocks.GOLDEN_GLYPH.get())) {
+        if (player.getMainHandItem().isEmpty() && state.is(ModBlocks.GOLDEN_GLYPH.get())) {
             //play a sound to provide feedback
             level.playSound(player, pos, SoundEvents.AMETHYST_CLUSTER_PLACE, SoundSource.BLOCKS, 1f, 1f);
             //If on CLIENT SIDE show particles

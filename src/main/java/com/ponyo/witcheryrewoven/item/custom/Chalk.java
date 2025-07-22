@@ -31,18 +31,18 @@ public class Chalk extends Item {
         Level level = context.getLevel();
         //the clicked Position is the position of the block the player clicked on
         BlockPos clickedPos = context.getClickedPos();
+        //This calculates the block position ABOVE the clicked block (where the glyph will be placed)
+        BlockPos placePos = clickedPos.above();
         //The side of the block the player clicked on (top, side, down, etc.)
         Direction face = context.getClickedFace();
         //The chalk item being used (white, red, gold, or purple)
         Item usedItem = context.getItemInHand().getItem();
 
+
         //This if statement only allows the chalk to work if the player clicked ontop of a block
         if (face != Direction.UP) {
             return InteractionResult.FAIL;
         }
-
-        //This calculates the block position ABOVE the clicked block (where the glyph will be placed)
-        BlockPos placePos = clickedPos.above();
 
         //if the block above is not replaceable,(like water, tall grass) fail & don't continue
         if(!level.getBlockState(placePos).canBeReplaced()){
