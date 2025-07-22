@@ -1,9 +1,6 @@
 package com.ponyo.witcheryrewoven;
 
-import com.ponyo.witcheryrewoven.block.ModBlocks;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;

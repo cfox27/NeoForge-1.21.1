@@ -2,11 +2,10 @@ package com.ponyo.witcheryrewoven.block;
 
 import com.ponyo.witcheryrewoven.WitcheryRewoven;
 import com.ponyo.witcheryrewoven.block.custom.GlyphBlock;
-import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
+import com.ponyo.witcheryrewoven.item.ModItems.MiscItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -15,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class MiscBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(WitcheryRewoven.MODID);
 
@@ -80,7 +79,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        MiscItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

@@ -1,22 +1,18 @@
 package com.ponyo.witcheryrewoven.item.custom;
 
-import com.ponyo.witcheryrewoven.block.ModBlocks;
+import com.ponyo.witcheryrewoven.block.MiscBlocks;
 import com.ponyo.witcheryrewoven.block.custom.GlyphBlock;
-import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
-import com.ponyo.witcheryrewoven.sound.ModSounds;
+import com.ponyo.witcheryrewoven.item.ModItems.MiscItems;
+import com.ponyo.witcheryrewoven.sound.MiscSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.fml.common.Mod;
 
 //Defines a new Item class of Chalk which will behave like any item unless an override functionality is used
 public class Chalk extends Item {
@@ -60,24 +56,24 @@ public class Chalk extends Item {
             int variant = level.getRandom().nextInt(12); // 0–11
 
             //if using white chalk, place a white glyph block with a random variant
-            if (usedItem == ModItems.WHITE_CHALK.get()) {
-                level.setBlock(placePos, ModBlocks.WHITE_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant), 3);
+            if (usedItem == MiscItems.WHITE_CHALK.get()) {
+                level.setBlock(placePos, MiscBlocks.WHITE_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant), 3);
             //if using golden chalk, only return the variant 0 (that's all that exists)
-            } else if (usedItem == ModItems.GOLDEN_CHALK.get()) {
-                    level.setBlock(placePos, ModBlocks.GOLDEN_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, 0), 3);
+            } else if (usedItem == MiscItems.GOLDEN_CHALK.get()) {
+                    level.setBlock(placePos, MiscBlocks.GOLDEN_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, 0), 3);
             //if using red chalk, place a red glyph block with a random variant
-            } else if (usedItem == ModItems.RED_CHALK.get()) {
-                level.setBlock(placePos, ModBlocks.RED_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant), 3);
+            } else if (usedItem == MiscItems.RED_CHALK.get()) {
+                level.setBlock(placePos, MiscBlocks.RED_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant), 3);
             //if using purple chalk, place a purple glyph block with a random variant
-            } else if (usedItem == ModItems.PURPLE_CHALK.get()) {
-                level.setBlock(placePos, ModBlocks.PURPLE_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant),3);
+            } else if (usedItem == MiscItems.PURPLE_CHALK.get()) {
+                level.setBlock(placePos, MiscBlocks.PURPLE_GLYPH.get().defaultBlockState().setValue(GlyphBlock.VARIANT, variant),3);
             }
             //damage the chalk durability by 1, and if the item breaks, triggers the item breaking
             context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), context.getPlayer(),
                     item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
             // we pass it null to play for all nearby players, but you can pass specific players (hallucination curse?)
-            level.playSound(null,placePos, ModSounds.CHALK_DRAW.get(), SoundSource.BLOCKS);
+            level.playSound(null,placePos, MiscSounds.CHALK_DRAW.get(), SoundSource.BLOCKS);
         }
         return InteractionResult.SUCCESS;
     }

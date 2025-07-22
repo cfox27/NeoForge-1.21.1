@@ -1,15 +1,14 @@
 package com.ponyo.witcheryrewoven;
 
-import com.ponyo.witcheryrewoven.block.ModBlocks;
+import com.ponyo.witcheryrewoven.block.MiscBlocks;
 import com.ponyo.witcheryrewoven.item.ModCreativeModeTabs;
-import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
+import com.ponyo.witcheryrewoven.item.ModItems.MiscItems;
 import com.ponyo.witcheryrewoven.item.ModItems.PlantItems;
-import com.ponyo.witcheryrewoven.sound.ModSounds;
+import com.ponyo.witcheryrewoven.sound.MiscSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -17,7 +16,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -39,11 +37,11 @@ public class WitcheryRewoven {
 
         ModCreativeModeTabs.register(modEventBus);
 
-        ModItems.register(modEventBus);
+        MiscItems.register(modEventBus);
         PlantItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        MiscBlocks.register(modEventBus);
 
-        ModSounds.register(modEventBus);
+        MiscSounds.register(modEventBus);
 
         // Register the item to a creative tab
         // modEventBus.addListener(this::addCreative);

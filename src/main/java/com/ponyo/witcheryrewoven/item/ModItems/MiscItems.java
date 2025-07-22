@@ -9,7 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModItems {
+public class MiscItems {
     //A list of everything you want to register, must register under MODID
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WitcheryRewoven.MODID);
@@ -36,14 +36,18 @@ public class ModItems {
                     .durability(64)));
     public static final DeferredItem<Item> MUTANDIS = ITEMS.register("mutandis",
             () -> new Mutandis(new Item.Properties()));
+    public static final DeferredItem<Item> MUTANDIS_EXTREMIS = ITEMS.register("mutandis_extremis",
+            () -> new Mutandis(new Item.Properties()));
     public static final DeferredItem<Item> GARLIC = ITEMS.register("garlic",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.GARLIC)));
+            () -> new Item(new Item.Properties()
+                    .food(ModFoodProperties.GARLIC)));
     public static final DeferredItem<Item> ROWAN_BERRY_PIE = ITEMS.register("rowan_berry_pie",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)
                     .food(ModFoodProperties.ROWAN_BERRY_PIE)));
     public static final DeferredItem<Item> ROWAN_BERRIES = ITEMS.register("rowan_berries",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.ROWAN_BERRIES)));
+            () -> new Item(new Item.Properties()
+                    .food(ModFoodProperties.ROWAN_BERRIES)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

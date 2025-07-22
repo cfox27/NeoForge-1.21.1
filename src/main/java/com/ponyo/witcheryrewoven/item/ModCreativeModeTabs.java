@@ -1,8 +1,8 @@
 package com.ponyo.witcheryrewoven.item;
 
 import com.ponyo.witcheryrewoven.WitcheryRewoven;
-import com.ponyo.witcheryrewoven.block.ModBlocks;
-import com.ponyo.witcheryrewoven.item.ModItems.ModItems;
+import com.ponyo.witcheryrewoven.block.MiscBlocks;
+import com.ponyo.witcheryrewoven.item.ModItems.MiscItems;
 import com.ponyo.witcheryrewoven.item.ModItems.PlantItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -18,26 +18,27 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WitcheryRewoven.MODID);
 
     public static final Supplier<CreativeModeTab> WITCHERYREWOVEN_ITEMS_TAB = CREATIVE_MODE_TAB.register("witcheryrewoven_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TAGLOCK_KIT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MiscItems.TAGLOCK_KIT.get()))
                     .title(Component.translatable("creativetab.witcheryrewoven.witcheryrewoven_items"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.TAGLOCK_KIT);
-                        output.accept(ModItems.BONE_NEEDLE);
-                        output.accept(ModItems.MUTANDIS);
+                        output.accept(MiscItems.TAGLOCK_KIT);
+                        output.accept(MiscItems.BONE_NEEDLE);
+                        output.accept(MiscItems.MUTANDIS);
+                        output.accept(MiscItems.MUTANDIS_EXTREMIS);
                         output.accept(PlantItems.ATTUNED_STONE);
                         output.accept(PlantItems.CLAY_JAR);
                         output.accept(PlantItems.SOFT_CLAY_JAR);
-                        output.accept(ModBlocks.ROWAN_LEAVES);
-                        output.accept(ModBlocks.ROWAN_LOG);
-                        output.accept(ModBlocks.ALDER_LEAVES);
-                        output.accept(ModBlocks.ALDER_LOG);
-                        output.accept(ModItems.WHITE_CHALK);
-                        output.accept(ModItems.GOLDEN_CHALK);
-                        output.accept(ModItems.RED_CHALK);
-                        output.accept(ModItems.PURPLE_CHALK);
-                        output.accept(ModItems.GARLIC);
-                        output.accept(ModItems.ROWAN_BERRIES);
-                        output.accept(ModItems.ROWAN_BERRY_PIE);
+                        output.accept(MiscBlocks.ROWAN_LEAVES);
+                        output.accept(MiscBlocks.ROWAN_LOG);
+                        output.accept(MiscBlocks.ALDER_LEAVES);
+                        output.accept(MiscBlocks.ALDER_LOG);
+                        output.accept(MiscItems.WHITE_CHALK);
+                        output.accept(MiscItems.GOLDEN_CHALK);
+                        output.accept(MiscItems.RED_CHALK);
+                        output.accept(MiscItems.PURPLE_CHALK);
+                        output.accept(MiscItems.GARLIC);
+                        output.accept(MiscItems.ROWAN_BERRIES);
+                        output.accept(MiscItems.ROWAN_BERRY_PIE);
                     }).build());
 
     public static void register(IEventBus eventBus) {

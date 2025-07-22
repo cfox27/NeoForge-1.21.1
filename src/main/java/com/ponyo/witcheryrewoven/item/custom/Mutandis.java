@@ -1,6 +1,5 @@
 package com.ponyo.witcheryrewoven.item.custom;
 
-import com.ponyo.witcheryrewoven.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
