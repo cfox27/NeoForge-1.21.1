@@ -27,15 +27,16 @@ public class ModCreativeModeTabs {
                         output.accept(PlantItems.ATTUNED_STONE);
                         output.accept(PlantItems.CLAY_JAR);
                         output.accept(PlantItems.SOFT_CLAY_JAR);
-                        output.accept(ModBlocks.LEAVES_ROWAN);
-                        output.accept(ModBlocks.LOG_ROWAN);
-                        output.accept(ModBlocks.LEAVES_ALDER);
-                        output.accept(ModBlocks.LOG_ALDER);
+                        output.accept(ModBlocks.ROWAN_LEAVES);
+                        output.accept(ModBlocks.ROWAN_LOG);
+                        output.accept(ModBlocks.ALDER_LEAVES);
+                        output.accept(ModBlocks.ALDER_LOG);
                         output.accept(ModItems.WHITE_CHALK);
                         output.accept(ModItems.GOLDEN_CHALK);
                         output.accept(ModItems.RED_CHALK);
                         output.accept(ModItems.PURPLE_CHALK);
                         output.accept(ModItems.GARLIC);
+                        output.accept(ModItems.ROWAN_BERRIES);
                     }).build());
 
     public static void register(IEventBus eventBus) {

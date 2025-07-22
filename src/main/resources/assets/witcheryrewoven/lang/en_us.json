@@ -12,9 +12,10 @@
   "item.witcheryrewoven.purple_chalk": "Purple Chalk",
   "item.witcheryrewoven.mutandis": "Mutandis",
   "item.witcheryrewoven.garlic": "Garlic",
+  "item.witcheryrewoven.rowan_berries": "Rowan Berries",
 
-  "block.witcheryrewoven.log_alder": "Alder Log",
-  "block.witcheryrewoven.log_rowan": "Rowan Log",
-  "block.witcheryrewoven.leaves_rowan": "Rowan Leaves",
-  "block.witcheryrewoven.leaves_alder": "Alder Leaves"
+  "block.witcheryrewoven.alder_log": "Alder Log",
+  "block.witcheryrewoven.rowan_log": "Rowan Log",
+  "block.witcheryrewoven.rowan_leaves": "Rowan Leaves",
+  "block.witcheryrewoven.alder_leaves": "Alder Leaves"
 }

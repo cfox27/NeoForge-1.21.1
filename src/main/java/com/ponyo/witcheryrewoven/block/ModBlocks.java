@@ -19,29 +19,29 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(WitcheryRewoven.MODID);
 
-    public static final DeferredBlock<Block> LOG_ALDER = registerBlock(
-            "log_alder",
+    public static final DeferredBlock<Block> ALDER_LOG = registerBlock(
+            "alder_log",
             () -> new Block(
                     BlockBehaviour.Properties.of()
                             .strength(2.0F)
                             .sound(SoundType.WOOD)));
 
-    public static final DeferredBlock<Block> LOG_ROWAN = registerBlock(
-            "log_rowan",
+    public static final DeferredBlock<Block> ROWAN_LOG = registerBlock(
+            "rowan_log",
             () -> new Block(
                     BlockBehaviour.Properties.of()
                             .strength(2.0F)
                             .sound(SoundType.WOOD)));
 
-    public static final DeferredBlock<Block> LEAVES_ROWAN = registerBlock(
-            "leaves_rowan",
+    public static final DeferredBlock<Block> ROWAN_LEAVES = registerBlock(
+            "rowan_leaves",
             () -> new Block(
                     BlockBehaviour.Properties.of()
                             .strength(.2F)
                             .sound(SoundType.GRASS)));
 
-    public static final DeferredBlock<Block> LEAVES_ALDER = registerBlock(
-            "leaves_alder",
+    public static final DeferredBlock<Block> ALDER_LEAVES = registerBlock(
+            "alder_leaves",
             () -> new Block(
                     BlockBehaviour.Properties.of()
                             .strength(.2F)

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "witcheryrewoven:block/leaves_rowan"
+    "all": "witcheryrewoven:block/alder_log"
   }
 }
