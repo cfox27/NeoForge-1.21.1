@@ -1,6 +1,7 @@
 package com.ponyo.witcheryrewoven.item.ModItems;
 
 import com.ponyo.witcheryrewoven.WitcheryRewoven;
+import com.ponyo.witcheryrewoven.item.ModFoodProperties;
 import com.ponyo.witcheryrewoven.item.custom.Chalk;
 import com.ponyo.witcheryrewoven.item.custom.Mutandis;
 import net.minecraft.world.item.Item;
@@ -27,6 +28,8 @@ public class ModItems {
             () -> new Chalk(new Item.Properties().stacksTo(1).durability(64)));
     public static final DeferredItem<Item> MUTANDIS = ITEMS.register("mutandis",
             () -> new Mutandis(new Item.Properties()));
+    public static final DeferredItem<Item> GARLIC = ITEMS.register("garlic",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GARLIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
