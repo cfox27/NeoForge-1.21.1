@@ -37,6 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PURPLE_CHALK);
                         output.accept(ModItems.GARLIC);
                         output.accept(ModItems.ROWAN_BERRIES);
+                        output.accept(ModItems.ROWAN_BERRY_PIE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
