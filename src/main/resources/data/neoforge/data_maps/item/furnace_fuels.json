@@ -1,0 +1,10 @@
+{
+  "values": {
+    "witcheryrewoven:alder_log": {
+      "burn_time": 300
+    },
+    "witcheryrewoven:rowan_log": {
+      "burn_time": 300
+    }
+  }
+}

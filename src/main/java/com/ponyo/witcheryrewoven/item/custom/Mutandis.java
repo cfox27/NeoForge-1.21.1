@@ -214,8 +214,10 @@ public class Mutandis extends Item {
         }
     }
 
+    //overrides the normal block use-on function
     @Override
     public InteractionResult useOn(UseOnContext context) {
+        //defines variables
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         BlockPos abovePos = pos.above();
